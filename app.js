@@ -63,10 +63,27 @@ setInterval(() =>{
 // 2. hide the name input box
 // 3. start the counters for the mame hunger, sleep, boredom, and age 
 
+const start = document.querySelector('.start');
+const nameHere = document.querySelector('.nameHere');
+const nameField = document.querySelector('.name');
+
+console.log(nameHere);
 
 
 
+start.addEventListener('click', printName);
+
+function printName (){
+    nameField.innerHTML = nameHere.value;
+    console.log('TESTING')
+}
+
+// printName();
+
+// function testing() {
+//     console.log('anything');
+// }
+
+// testing();
 
 
-// const start = document.getElementsByClassName('start');
-// console.log(start)
