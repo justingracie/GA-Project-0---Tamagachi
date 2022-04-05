@@ -2,6 +2,10 @@
 let age = 0
 let ageValue= document.getElementById('age');
 
+let hunger = 0
+let hungryness = document.getElementById('hunger')
+
+
 
 //sample counter method --->
 // set one get age count that increments: then displays Age on the screen.
@@ -21,10 +25,8 @@ setInterval(()=>{
 // age increasing by 1 every 10 seconds
 
 
-//HUNGER SCALE ----->
+//HUNGER Counter ----->
 
-let hunger = 0
-let hungryness = document.getElementById('hunger')
 
 setInterval(()=>{
     hunger = Math.min(hunger +1, 10);
@@ -33,6 +35,9 @@ setInterval(()=>{
 }, 1000);
 
 
+//SLEEPINESS Counter ----->
+
+let 
 
 //start BUtton name Section ----->
 
