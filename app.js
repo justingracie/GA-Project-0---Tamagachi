@@ -29,7 +29,7 @@ setInterval(()=>{
 
 
 setInterval(()=>{
-    hunger = Math.min(hunger +1, 10)
+    hunger = Math.min(hunger +1, 10);
     hungryness.innerHTML = `${hunger} /10`;
 }, 1000);
 
@@ -38,9 +38,21 @@ setInterval(()=>{
 
 
 setInterval(()=>{
-    bored = Math.min(bored +1, 10)
+    bored = Math.min(bored +1, 10);
     boredom.innerHTML = `${bored} /10`
 }, 1000)
+
+//Sleepiness Counter ----->
+
+let sleep = 0;
+const sleepiness = document.getElementById('sleepy');
+
+setInterval(() =>{
+    sleep = Math.min(sleep +=1, 10);
+    sleepiness.innerHTML = `${sleep} /10`
+}, 1000)
+
+
 
 
 
