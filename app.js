@@ -15,6 +15,8 @@ const nameHere = document.querySelector('.nameHere');
 const nameField = document.querySelector('.name');
 const feedButton = document.querySelector('.feed');
 
+const lightsOutButton = document.querySelector('.lights');
+const playButton = document.querySelector('.play');
 
 
 
@@ -82,19 +84,22 @@ function feedPet(){
 
 //PLAY BUTTON -----> this button should decrement the boredom by 5
 
-const playButton = document.querySelector('.play');
 
-playButton.addEventListener('click', playWithPet)
+playButton.addEventListener('click', playWithPet);
 
 function playWithPet(){
     bored -=5;
 }
 
 
-//LIGHTS OUT -----> this button should  decrement sleepiness by 3
+//LIGHTS OUT -----> this button should  decrement sleepiness by 5
 
 
+lightsOutButton.addEventListener('click', napTime);
 
+function napTime(){
+    sleep -=5;
+}
 
 //START button ----->
 
