@@ -13,38 +13,55 @@ const sleepiness = document.getElementById('sleepy');
 
 
 // AGE Counter------>
+function ageCounter(){
 
-setInterval(()=>{
-    age++
-    ageValue.innerHTML = age;
-}, 10000)
+    setInterval(()=>{
+        age++
+        ageValue.innerHTML = age;
+    }, 10000)
+
+}
+
 // age increasing by 1 every 10 seconds
 
 
 //HUNGER Counter ----->
+function hungerCounter(){
+    
+    setInterval(()=>{
+        hunger = Math.min(hunger +1, 10);
+        hungryness.innerHTML = `${hunger} /10`;
+    }, 1000);
 
-setInterval(()=>{
-    hunger = Math.min(hunger +1, 10);
-    hungryness.innerHTML = `${hunger} /10`;
-}, 1000);
+}
 //hunger increases by 1 every second
 
 
 //Bored Counter ----->
+function boredCounter(){
 
-setInterval(()=>{
-    bored = Math.min(bored +1, 10);
-    boredom.innerHTML = `${bored} /10`
-}, 1000)
+    setInterval(()=>{
+        bored = Math.min(bored +1, 10);
+        boredom.innerHTML = `${bored} /10`
+    }, 1000)
+
+}
+
+
 //boredom increase by 1 every second
 
 
 //Sleepiness Counter ----->
+function sleepinessCounter(){
 
-setInterval(() =>{
-    sleep = Math.min(sleep +=1, 10);
-    sleepiness.innerHTML = `${sleep} /10`
-}, 1000)
+    setInterval(() =>{
+        sleep = Math.min(sleep +=1, 10);
+        sleepiness.innerHTML = `${sleep} /10`
+    }, 1000)
+
+
+}
+
 //sleepiness increase by 1 every second
 
 
@@ -59,9 +76,9 @@ setInterval(() =>{
 
 // start button should do a few things: 
 
-// 1. print the name entered in the  input box into a DIV 
-// 2. hide the name input box
-// 3. start the counters for the mame hunger, sleep, boredom, and age 
+// 1. print the name entered in the  input box into a DIV - DONE!
+// 2. hide the name input box and start button
+// 3. start the counters for hunger, sleep, boredom, and age.
 
 const start = document.querySelector('.start');
 const nameHere = document.querySelector('.nameHere');
@@ -80,3 +97,13 @@ function printName (){
 }
 //This event listener and function prints the name input into a box Div
 
+start.addEventListener('click', startTimers);
+
+function startTimers(){
+    hungerCounter();
+    ageCounter();
+    boredCounter();
+    sleepinessCounter();
+}
+
+// if I wrap all the timers in a function I can add an event listener that envokes all the timer functions. 
