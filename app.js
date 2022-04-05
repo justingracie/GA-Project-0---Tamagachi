@@ -67,7 +67,7 @@ const start = document.querySelector('.start');
 const nameHere = document.querySelector('.nameHere');
 const nameField = document.querySelector('.name');
 
-console.log(nameHere);
+
 
 
 
@@ -75,15 +75,8 @@ start.addEventListener('click', printName);
 
 function printName (){
     nameField.innerHTML = nameHere.value;
+    nameHere.value = '';
     console.log('TESTING')
 }
-
-// printName();
-
-// function testing() {
-//     console.log('anything');
-// }
-
-// testing();
-
+//This event listener and function prints the name input into a box Div
 
