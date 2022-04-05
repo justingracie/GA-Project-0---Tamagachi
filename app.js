@@ -1,20 +1,20 @@
 //  --->GLOBAL VARIABLES<--- //
 let age = 0
-let ageValue= document.getElementById('age');
+const ageValue= document.getElementById('age');
 
 let hunger = 0
-let hungryness = document.getElementById('hunger')
+const hungryness = document.getElementById('hunger')
 
+let bored = 0
+const boredom = document.getElementById('bored')
 
 
 //sample counter method --->
 // set one get age count that increments: then displays Age on the screen.
 
 
-// AGE INCREMENTER ------>
+// AGE Counter------>
 
-
-console.log(ageValue)
 
 
 setInterval(()=>{
@@ -29,15 +29,20 @@ setInterval(()=>{
 
 
 setInterval(()=>{
-    hunger = Math.min(hunger +1, 10);
-    
+    hunger = Math.min(hunger +1, 10)
     hungryness.innerHTML = `${hunger} /10`;
 }, 1000);
 
 
-//SLEEPINESS Counter ----->
+//Bored Counter ----->
 
-let 
+
+setInterval(()=>{
+    bored = Math.min(bored +1, 10)
+    boredom.innerHTML = `${bored} /10`
+}, 1000)
+
+
 
 //start BUtton name Section ----->
 
