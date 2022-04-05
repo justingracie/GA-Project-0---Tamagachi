@@ -1,3 +1,72 @@
 body{
-    background-color: aquamarine;
+    background-image: url('https://wallpaperaccess.com/full/234906.jpg');
+    /* background: linear-gradient( 45deg, #049CD8, #FBD000, #E52521, #43B047) ;
+     */
+     color: black;
+     text-align: center;
+
 }
+
+.status{
+    list-style: none;
+}
+
+.button{
+    margin-top: 25px;
+}
+
+.lights{
+    border-radius: 50%;
+    background-color: rgb(72, 208, 208);
+    color: rgb(249, 249, 249);
+    height: 40px;
+}
+.feed{
+    border-radius: 50%;
+    background-color: rgb(72, 208, 208);
+    color: rgb(249, 249, 249);
+    height: 40px;
+}
+.play{
+    border-radius: 50%;
+    background-color: rgb(72, 208, 208);
+    color: rgb(249, 249, 249);
+    height: 40px;
+}
+.start{
+    border-radius: 50%;
+    background-color: rgb(72, 208, 208);
+    color: rgb(249, 249, 249);
+    height: 40px;
+}
+ul{
+    list-style: none;
+}
+
+#age{
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    background-color: rgb(72, 208, 208);
+    border-style: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+   
+
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+#modal{
+    display: block;
+}
+
