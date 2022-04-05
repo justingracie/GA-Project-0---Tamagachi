@@ -111,10 +111,16 @@ function napTime(){
 
 
 start.addEventListener('click', printName);
+const getStarted = document.querySelector('.getStarted');
+
+console.log(getStarted);
+
 
 function printName (){
     nameField.innerHTML = nameHere.value;
     nameHere.value = '';
+    getStarted.classList.add('hide');
+
     // console.log('TESTING')
 }
 // ^This event listener and function prints the name input into a box Div
