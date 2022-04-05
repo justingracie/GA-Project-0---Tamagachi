@@ -16,12 +16,21 @@ console.log(ageValue)
 setInterval(()=>{
     age++
     ageValue.innerHTML = age;
-}, 100000)
+}, 10000)
 
 // age increasing by 1 every 10 seconds
 
 
+//HUNGER SCALE ----->
 
+let hunger = 0
+let hungryness = document.getElementById('hunger')
+
+setInterval(()=>{
+    hunger = Math.min(hunger +1, 10);
+    
+    hungryness.innerHTML = `${hunger} /10`;
+}, 1000);
 
 
 
