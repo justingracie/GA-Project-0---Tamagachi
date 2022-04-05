@@ -10,6 +10,12 @@ const boredom = document.getElementById('bored')
 
 let sleep = 0;
 const sleepiness = document.getElementById('sleepy');
+const start = document.querySelector('.start');
+const nameHere = document.querySelector('.nameHere');
+const nameField = document.querySelector('.name');
+const feedButton = document.querySelector('.feed');
+
+
 
 
 // AGE Counter------>
@@ -31,7 +37,7 @@ function hungerCounter(){
     setInterval(()=>{
         hunger = Math.min(hunger +1, 10);
         hungryness.innerHTML = `${hunger} /10`;
-    }, 1000);
+    }, 4000);
 
 }
 //hunger increases by 1 every second
@@ -66,7 +72,25 @@ function sleepinessCounter(){
 
 
 //FEED button -----> this button should decrement the hungriness by 2 on each click
+
+
+feedButton.addEventListener('click', feedPet)
+
+function feedPet(){
+    hunger -=2;
+}
+
 //PLAY BUTTON -----> this button should decrement the boredom by 5
+
+const playButton = document.querySelector('.play');
+
+playButton.addEventListener('click', playWithPet)
+
+function playWithPet(){
+    bored -=5;
+}
+
+
 //LIGHTS OUT -----> this button should  decrement sleepiness by 3
 
 
@@ -77,15 +101,8 @@ function sleepinessCounter(){
 // start button should do a few things: 
 
 // 1. print the name entered in the  input box into a DIV - DONE!
-// 2. hide the name input box and start button
+// 2. hide the name input box and start button --- this is optional for now
 // 3. start the counters for hunger, sleep, boredom, and age.
-
-const start = document.querySelector('.start');
-const nameHere = document.querySelector('.nameHere');
-const nameField = document.querySelector('.name');
-
-
-
 
 
 start.addEventListener('click', printName);
@@ -106,4 +123,5 @@ function startTimers(){
     sleepinessCounter();
 }
 
-// if I wrap all the timers in a function I can add an event listener that envokes all the timer functions. 
+// if I wrap all the timers in a function I can add an event 
+//listener that envokes all the timer functions. 
