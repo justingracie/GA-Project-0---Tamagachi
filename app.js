@@ -10,11 +10,11 @@ const boredom = document.getElementById('bored')
 
 let sleep = 0;
 const sleepiness = document.getElementById('sleepy');
+
 const start = document.querySelector('.start');
 const nameHere = document.querySelector('.nameHere');
 const nameField = document.querySelector('.name');
 const feedButton = document.querySelector('.feed');
-
 const lightsOutButton = document.querySelector('.lights');
 const playButton = document.querySelector('.play');
 
@@ -27,6 +27,7 @@ function ageCounter(){
         age++
         ageValue.innerHTML = age;
     }, 10000)
+    
 
 }
 
@@ -66,8 +67,7 @@ function sleepinessCounter(){
         sleep = Math.min(sleep +=1, 10);
         sleepiness.innerHTML = `${sleep} /10`
     }, 1000)
-
-
+    
 }
 
 //sleepiness increase by 1 every second
@@ -79,7 +79,7 @@ function sleepinessCounter(){
 feedButton.addEventListener('click', feedPet)
 
 function feedPet(){
-    hunger -=2;
+    hunger -=3;
 }
 
 //PLAY BUTTON -----> this button should decrement the boredom by 5
@@ -88,7 +88,7 @@ function feedPet(){
 playButton.addEventListener('click', playWithPet);
 
 function playWithPet(){
-    bored -=5;
+    bored -=6;
 }
 
 
@@ -98,7 +98,7 @@ function playWithPet(){
 lightsOutButton.addEventListener('click', napTime);
 
 function napTime(){
-    sleep -=5;
+    sleep -=6;
 }
 
 //START button ----->
@@ -115,18 +115,34 @@ start.addEventListener('click', printName);
 function printName (){
     nameField.innerHTML = nameHere.value;
     nameHere.value = '';
-    console.log('TESTING')
+    // console.log('TESTING')
 }
-//This event listener and function prints the name input into a box Div
+// ^This event listener and function prints the name input into a box Div
 
 start.addEventListener('click', startTimers);
 
 function startTimers(){
+
     hungerCounter();
     ageCounter();
     boredCounter();
     sleepinessCounter();
 }
 
-// if I wrap all the timers in a function I can add an event 
+// ^ if I wrap all the timers in a function I can add an event 
 //listener that envokes all the timer functions. 
+
+
+//GAME OVER ----->
+
+// sleepiness.addEventListener('input', tooSleepy)
+
+function tooSleepy(){
+    
+    if(sleep == 10);
+    console.log('game over!')
+
+}
+
+
+// tooSleepy();
